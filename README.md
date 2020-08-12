@@ -10,7 +10,7 @@ These UserStyles will update automatically, but they are primarily intented for 
 
 Click on “Install this style” to view the CSS code or install the respective styles automatically if you already have Stylus in your browser.
 
-- [airtable.com neat kanban](#airtable.com neat kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI.
+- [airtable.com neat kanban](#airtablecom neat kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI.
 
 ---
 
