@@ -1,0 +1,249 @@
+/* ==UserStyle==
+@name         airtable.com neat kanban
+@description  Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI.
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.css
+@version      0.1.0
+@license      The Unlicense - https://unlicense.org
+
+@preprocessor default
+@var text airt-asignee "“Assigned to” field title" Action of
+==/UserStyle== */
+
+
+
+@-moz-document domain("airtable.com") {
+	/* ==========================================================================
+	Thin scrollbars (optional)
+	========================================================================== */
+	* {
+		scrollbar-color: rgb(125,125,125) transparent;
+		scrollbar-width: thin !important;
+	}
+
+	body, html {
+		scrollbar-color: rgb(125,125,125) #000;
+	}
+}
+
+@-moz-document domain("airtable.com") {
+	/* ==========================================================================
+	Set color variables, for use in rgba() / rgb()
+	========================================================================== */
+	:root {
+		--airt-text-color: 0, 0, 0;
+		--airt-border-color: 0, 0, 0;
+		--airt-card-color: 255, 255, 255;
+		--airt-kanban-color: 0, 0, 0, 0;
+
+		/* dark theme demo */
+	/*	--airt-text-color: 255, 255, 255;
+		--airt-border-color: 255, 255, 255;
+		--airt-card-color: 39, 40, 43;
+		--airt-kanban-color: 28, 29, 31;*/
+	}
+
+
+	/* ==========================================================================
+	Remove default background colors and borders
+	========================================================================== */
+
+	/* in kanban board */
+	#kanbanView {
+		background: rgba(var(--airt-kanban-color));
+	}
+
+	/* remove background from each column */
+	.kanbanStackHeightContainer {
+		background: none !important;
+	}
+
+	/* remove background from card shapes */
+	.kanbanCardContainer,
+	.kanbanCardContainer > .baymaxGalleryCard > .rounded-big {
+		background: none;
+	}
+
+	/* remove column overflow default shade */
+	.kanbanStackHeightContainer .border-bottom-thick,
+	.kanbanStackHeightContainer .border-top-thick {
+		border-color: transparent;
+	}
+
+	/* set background color */
+	.baymaxGalleryCard {
+		background: rgba(var(--airt-card-color));
+	}
+
+	/* card outline */
+	.kanbanCardContainer .button-stroked1 {
+		box-shadow: 0 0 0 2px rgba(var(--airt-border-color),0.05);
+	}
+
+	/* card outline hovered */
+	.kanbanCardContainer .button-stroked1:hover {
+		box-shadow: 0 0 0 2px rgba(var(--airt-border-color),0.2);
+	}
+
+	/* column header */
+	.kanbanStackHeader {
+		background: none !important;
+		border-bottom: 2px solid rgba(var(--airt-border-color),0.2);
+	}
+
+	/* column footer */
+	.kanbanStackFooter {
+		background: none !important;
+		border-top: 2px solid rgba(var(--airt-border-color),0.2);
+	}
+
+	/* stacked column */
+	.collapsedKanbanStack > div {
+		background: none;
+	}
+
+	.collapsedKanbanStack:hover > div {
+		background: rgba(var(--airt-card-color));
+	}
+
+	/* "+ New stack" */
+	.stacksContainer > div > div:last-child {
+		background: none;
+		opacity: 0.2;
+	}
+
+	/* ==========================================================================
+	Make cards wider
+	========================================================================== */
+
+	.kanbanCardContainer {
+		margin-left: -16px; /* 18px - 2px for the box-shadow */
+		width: 98% !important; /* accomodate for scrollbars */
+	}
+
+	.kanbanCardContainer > .baymaxGalleryCard > .rounded-big {
+		width: 100% !important;
+	}
+
+
+	/* ==========================================================================
+	Make card titles span two rows
+	========================================================================== */
+
+	.kanbanCardContainer .galleryCardPrimaryCell {
+		margin-top: 0.5em;
+		max-height: 3.4em;
+		overflow: hidden;
+		font-size: 0.8em;
+		white-space: normal;
+
+		/* display ellipsis when text overflows */
+		-webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    display: -webkit-box;
+	}
+
+
+	/* ==========================================================================
+	Column footer
+	========================================================================== */
+
+	/* make new card button less prominent */
+	#kanbanView .addRowButton.parentComplementaryColoredBackground {
+		background: none !important;
+	}
+
+	/*.addRowButton svg {
+		color: rgba(var(--airt-text-color),0.4) !important;
+	}*/
+
+
+	/* ==========================================================================
+	Column header
+	========================================================================== */
+
+	/* make menu button less prominent */
+	.kanbanStackHeader .menuButton {
+		color: rgba(var(--airt-text-color),0.5) !important;
+	}
+
+	/* restyle header pill */
+	.kanbanStackHeader .pill {
+		display: block;
+		width: 0;
+		overflow: visible;
+		border: 2px solid rgba(var(--airt-border-color));
+		color: rgba(var(--airt-text-color));
+		font-weight: bold !important;
+	}
+
+	.kanbanStackHeader .truncate {
+		overflow: visible;
+	}
+
+	.kanbanStackHeader .pill > .truncate {
+		margin-left: 1.3em;
+		margin-top: -1px;
+	}
+
+	/* but fix collaborator columns */
+	.kanbanStackHeader div[data-columntype="collaborator"] .pill {
+		background: none !important;
+		border: none;
+	}
+
+
+	/* ==========================================================================
+	Text color
+	========================================================================== */
+	#kanbanView {
+		color: rgba(var(--airt-text-color));
+	}
+
+	#kanbanView .cell,
+	#kanbanView .galleryCardPrimaryCell {
+		color: rgba(var(--airt-text-color)) !important;
+	}
+
+	#kanbanView .text-gray,
+	#kanbanView .text-dark {
+		color: rgba(var(--airt-text-color),0.3);
+	}
+
+	#kanbanView .kanbanStackFooter,
+	#kanbanView .kanbanStackFooter svg {
+		color: rgba(var(--airt-text-color),0.5) !important;
+	}
+}
+
+@-moz-document domain("airtable.com") {
+	/* ==========================================================================
+	Style assignee field (optional)
+		when "Action of" is the field's title
+		displays best if it's the last field
+	========================================================================== */
+
+/*	#kanbanView {
+		--airt-asignee: 'Action of';
+	}*/
+
+	#kanbanView div[title="Action of"] {
+		visibility: hidden;
+	}
+
+	#kanbanView div[title="Action of"] + div {
+	/* 	outline: 1px solid red; */
+		float: right;
+	}
+
+	#kanbanView div[title="Action of"] + div .pill {
+		display: none;
+	}
+
+	#kanbanView div[data-columntype="collaborator"] .circle {
+		border: 2px solid rgba(var(--airt-border-color),0.1) !important;
+		background-clip: padding-box;
+	}
+}
