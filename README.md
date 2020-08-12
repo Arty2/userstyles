@@ -10,13 +10,13 @@ These UserStyles will update automatically, but they are primarily intented for 
 
 Click on “Install this style” to view the CSS code or install the respective styles automatically if you already have Stylus in your browser.
 
-- [airtable.com neat kanban](#airtablecom neat kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI.
+- [airtable.com neat kanban](#airtablecom neat kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI.
 
 ---
 
 ### airtable.com neat kanban
 
-Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI. It also applies thin scrollbars all over *airtable.com* (this block may be removed) and modifies a collaborator field with the title “Action of”, if it exists.
+Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI. It also applies thin scrollbars all over *airtable.com* (this block may be removed) and modifies a collaborator field with the title “Action of”, if it exists.
 
 [⏬ Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.css)
 

@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name         airtable.com neat kanban
-@description  Modifies the display of Airtable’s Kanban view to make better use of available space and simplyfy the cards UI.
+@description  Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI.
 @author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
 @namespace    https://heracl.es
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.css
 @version      0.1.0
-@license      The Unlicense - https://unlicense.org
+@license      Unlicense License - https://unlicense.org
 
 @preprocessor default
 @var text airt-asignee "“Assigned to” field title" Action of
