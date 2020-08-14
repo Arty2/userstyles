@@ -19,7 +19,7 @@ Click on View this style” to view the CSS code.
 
 Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI. It also applies thin scrollbars all over *airtable.com* (this block may be removed) and modifies a collaborator field with the title “Action of”, if it exists.
 
-[⏬ View this style](https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.css)
+[⏬ View this style](https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.user.css)
 
 ![airtable.com neat kanban](./screenshots/airtable-com_neat-kanban.gif)
 
