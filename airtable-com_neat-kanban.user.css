@@ -21,17 +21,8 @@
 
 
 @-moz-document domain("airtable.com") {
-	/* dark theme demo */
-/*	:root {
-		--airt-text-color: 255, 255, 255;
-		--airt-border-color: 255, 255, 255;
-		--airt-card-color: 39, 40, 43;
-		--airt-kanban-color: 28, 29, 31;
-	}*/
-
-
 	/* ==========================================================================
-	Remove default background colors and borders
+	Set default background colors and borders
 	========================================================================== */
 
 	/* in kanban board */
