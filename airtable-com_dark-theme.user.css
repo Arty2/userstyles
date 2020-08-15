@@ -40,7 +40,16 @@
 		filter: invert(100%);
 	}
 
+	#hyperbaseContainer img,
+	#hyperbaseContainer button { /* revert images back to normal */
+	    filter: invert(100%);
+	}
+
 	.appTopBarContainer .userIcon {
 		filter: invert(100%);
+	}
+
+	#hyperbaseContainer .pill,
+	#hyperbaseContainer .colorOption {
 	}
 }
