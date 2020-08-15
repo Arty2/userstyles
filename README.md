@@ -6,24 +6,46 @@ Use with the **Stylus** browser addon (for [Firefox](https://addons.mozilla.org/
 
 These UserStyles may update automatically to accomodate for improvements and breaking changes, but they are primarily intented for my personal use, hence I am reluctant to changes that do not serve my use cases. You may use the [Issue page](https://github.com/Arty2/userstyles/issues) to report any unintented behaviour (bugs) or breaks (usually when the website implements a major change) that you come accross.
 
-## Index of styles
+## Index
 
 Click on “Install this style” to preview the CSS code and install directy if you already have Stylus enabled. All styles support automatic updates.
 
-- global styles
-    + [thin scrollbars](#thin-scrollbars) — Firefox only: Applies thin scrollbars to all windows and elements. The colors are configurable.
+- Global styles
+    + [Hide dickbars](#hide-dickbars) — Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com, instragram.com, twitter.com.
+    + [Thin scrollbars](#thin-scrollbars) — [Firefox only](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width#Browser_compatibility): Applies thin scrollbars to all windows and elements. The colors are configurable.
 - airtable.com
+    + [airtable.com dark theme](#airtablecom-dark-theme) — Dark theme for airtable.com. Beta quality, beware of 🐛.
     + [airtable.com neat kanban](#airtablecom-neat-kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI.
 
 
 * * *
 
-### thin scrollbars
 
-Firefox only: Applies thin scrollbars to all windows and elements. The colors are configurable.
+## Global styles
+
+Global or single-purpose styles that apply to multiple domains.
+
+### Hide dickbars
+
+Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com, instragram.com, twitter.com.
+
+📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
+
+
+### Thin scrollbars
+
+[Firefox only](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width#Browser_compatibility): Applies thin scrollbars to all windows and elements. The colors are configurable.
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_thin-scrollbars.user.css)
 
+
+## airtable.com
+
+### airtable.com dark theme
+
+Dark theme for airtable.com. Beta quality, beware of 🐛.
+
+📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_dark-theme.user.css)
 
 ### airtable.com neat kanban
 
