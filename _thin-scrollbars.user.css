@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name         thin scrollbars
+@description  Firefox only: Changes all scrollbars to their thin version.
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_thin-scrollbars.user.css
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.1
+@license      MIT License
+
+@preprocessor default
+
+@var color fg-color "Foreground color" rgb(125,125,125)
+@var color bg-color "Body background color" rgb(0,0,0)
+@var color ebg-color "Element background color" rgba(0,0,0,0)
+
+==/UserStyle== */
+
+
+@-moz-document url-prefix("http") {
+	/* element scrollbars */
+	* {
+		scrollbar-color: var(--fg-color) var(--ebg-color);
+		scrollbar-width: thin !important;
+	}
+
+	/* window scrollbars */
+	body, html {
+		scrollbar-color: var(--fg-color) var(--bg-color);
+	}
+}
