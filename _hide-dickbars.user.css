@@ -1,0 +1,52 @@
+/* ==UserStyle==
+@name         Hide dickbars
+@description  Hides “dickbars”, i.e. annoying CTAs and floating bars in several websites.
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.0
+@license      MIT License
+==/UserStyle== */
+
+
+@-moz-document domain("facebook.com") {
+	/* ==========================================================================
+	Hide login CTA on facebook profiles
+	========================================================================== */
+	#pagelet_growth_expanding_cta {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("instagram.com") {
+	/* ==========================================================================
+	Hide bottom CTA on instagram profiles
+	========================================================================== */
+	/* trialing rule, may be too aggressive */
+	div[style="width: 100%;"] {
+		display: none !important;
+	}
+
+	/* ==========================================================================
+	Hide login CTA on instagram profiles
+	========================================================================== */
+	body {
+		overflow: auto !important;
+	}
+
+	/* trialing rule, may be too aggressive */
+	div[role="presentation"] {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("twitter.com") {
+	/* ==========================================================================
+	Hide bottom CTA on twitter profiles
+	========================================================================== */
+	#layers {
+		display: none !important;
+	}
+}
