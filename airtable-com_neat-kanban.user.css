@@ -5,45 +5,29 @@
 @namespace    https://heracl.es
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.user.css
-@version      0.1.1
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.4
 @license      MIT License
 
 @preprocessor default
-@var text airt-asignee "“Assigned to” field title" Action of
+
+@var text airt-text-color "Text color (RGB)" "0, 0, 0"
+@var text airt-border-color "Border color (RGB)" "0, 0, 0"
+@var text airt-card-color "Card background color (RGB)" "255, 255, 255"
+@var text airt-kanban-color "Kanban background color (RGBA)" "0, 0, 0, 0"
+@var text airt-asignee "“Assigned to” field title (requires manual edit)" Action of
+
 ==/UserStyle== */
 
 
-
 @-moz-document domain("airtable.com") {
-	/* ==========================================================================
-	Thin scrollbars (optional)
-	========================================================================== */
-	* {
-		scrollbar-color: rgb(125,125,125) transparent;
-		scrollbar-width: thin !important;
-	}
-
-	body, html {
-		scrollbar-color: rgb(125,125,125) #000;
-	}
-}
-
-@-moz-document domain("airtable.com") {
-	/* ==========================================================================
-	Set color variables, for use in rgba() / rgb()
-	========================================================================== */
-	:root {
-		--airt-text-color: 0, 0, 0;
-		--airt-border-color: 0, 0, 0;
-		--airt-card-color: 255, 255, 255;
-		--airt-kanban-color: 0, 0, 0, 0;
-
-		/* dark theme demo */
-	/*	--airt-text-color: 255, 255, 255;
+	/* dark theme demo */
+/*	:root {
+		--airt-text-color: 255, 255, 255;
 		--airt-border-color: 255, 255, 255;
 		--airt-card-color: 39, 40, 43;
-		--airt-kanban-color: 28, 29, 31;*/
-	}
+		--airt-kanban-color: 28, 29, 31;
+	}*/
 
 
 	/* ==========================================================================
