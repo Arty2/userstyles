@@ -1,0 +1,46 @@
+/* ==UserStyle==
+@name         airtable.com dark theme
+@description  Dark theme for airtable.com. Beta quality, beware of 🐛.
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_dark-theme.user.css
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.0
+@license      MIT License
+
+@preprocessor default
+
+@var text airt-text-color "Text color (RGB)" "0, 0, 0"
+@var text airt-border-color "Border color (RGB)" "255, 255, 255"
+@var text airt-card-color "Card background color (RGB)" "39, 40, 43"
+@var text airt-kanban-color "Kanban background color (RGBA)" "0, 0, 0, 0"
+
+==/UserStyle== */
+
+
+@-moz-document domain("airtable.com") {
+	/* ==========================================================================
+	Set default background colors and borders
+	========================================================================== */
+	
+	/* in kanban board */
+	#kanbanView {
+		background: rgba(var(--airt-kanban-color));
+	}
+
+	/* ==========================================================================
+	Invert colors
+	========================================================================== */
+	#hyperbaseContainer {
+		filter: invert(100%);
+	}
+
+	#hyperbaseContainer .white {
+		filter: invert(100%);
+	}
+
+	.appTopBarContainer .userIcon {
+		filter: invert(100%);
+	}
+}
