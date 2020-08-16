@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.0
+@version      0.1.1
 @license      MIT License
 ==/UserStyle== */
 
@@ -47,6 +47,16 @@
 	Hide bottom CTA on twitter profiles
 	========================================================================== */
 	#layers {
+		display: none !important;
+	}
+}
+
+
+@-moz-document domain("newyorker.com") {
+	/* ==========================================================================
+	Hide bottom CTA
+	========================================================================== */
+	.paywall-bar__wrapper {
 		display: none !important;
 	}
 }

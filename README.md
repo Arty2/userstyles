@@ -11,7 +11,7 @@ These UserStyles may update automatically to accomodate for improvements and bre
 Click on “Install this style” to preview the CSS code and install directy if you already have Stylus enabled. All styles support automatic updates.
 
 - Global styles
-    + [Hide dickbars](#hide-dickbars) — Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com, instragram.com, twitter.com.
+    + [Hide dickbars](#hide-dickbars) — Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com, instragram.com, twitter.com, newyorker.com.
     + [Thin scrollbars](#thin-scrollbars) — [Firefox only](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width#Browser_compatibility): Applies thin scrollbars to all windows and elements. The colors are configurable.
 - airtable.com
     + [airtable.com dark theme](#airtablecom-dark-theme) — Dark theme for airtable.com. Beta quality, beware of 🐛.
