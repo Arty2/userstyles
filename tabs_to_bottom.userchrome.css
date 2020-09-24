@@ -1,0 +1,40 @@
+/*
+https://github.com/Arty2/userstyles
+@version      0.2.0
+
+1. Navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this) or locate the exact directory by visiting `about:profiles`.
+2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste this code.
+3. If userChrome.css doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true`.
+
+Other references:
+Firefox Support forum - Tabs below the URL bar: https://support.mozilla.org/en-US/kb/forum-response-tabs-below-url-bar
+Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
+*/
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*
+tabs to bottom
+source: https://gist.github.com/Arty2/e6e61801531ec5ee1f9f
+*/
+
+/* bring the browser window to the top */
+#browser {
+	-moz-box-ordinal-group: 0 !important;
+	padding-top: 8px;
+}
+
+/* alternative: move the toolbar to the bottom; */
+/*#appMenu-viewCache + box {
+	-moz-box-ordinal-group: 2 !important;
+}*/
+
+/* hide tab toolbar when fullscreen */
+#nav-bar[inFullscreen],
+#TabsToolbar[inFullscreen] {
+	display: none;
+}
+
+/* hide titlebar buttons */
+#TabsToolbar > .titlebar-buttonbox-container {
+	display: none !important;
+}
