@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.5
+@version      0.1.6
 @license      MIT License
 ==/UserStyle== */
 
@@ -73,6 +73,15 @@
 
 	#app > div:first-child > div > div:last-child,
 	#gateway-content {
+		display: none;
+	}
+}
+
+@-moz-document domain("wired.com") {
+	/* ==========================================================================
+	Hide paywall and CTA
+	========================================================================== */
+	.paywall-bar {
 		display: none;
 	}
 }

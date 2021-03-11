@@ -30,7 +30,7 @@ Global or single-purpose styles that apply to multiple domains.
 
 ### Hide dickbars
 
-Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com, instragram.com, twitter.com, newyorker.com, nytimes.com.
+Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com, instragram.com, twitter.com, newyorker.com, nytimes.com, wired.com.
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
 
