@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.7
+@version      0.1.8
 @license      MIT License
 ==/UserStyle== */
 
@@ -57,6 +57,7 @@
 	Hide bottom CTA
 	========================================================================== */
 	.paywall-bar__wrapper,
+	.paywall-modal,
 	.unit-overlay,
 	#signInContainer {
 		display: none !important;
