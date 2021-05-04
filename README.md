@@ -30,7 +30,7 @@ Global or single-purpose styles that apply to multiple domains.
 
 ### Hide dickbars
 
-Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com, instragram.com, twitter.com, newyorker.com, nytimes.com, wired.com.
+Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com, instragram.com, twitter.com, newyorker.com, nytimes.com, wired.com, artforum.com.
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
 
@@ -45,7 +45,7 @@ Applies thin scrollbars to all windows and elements. The colors are configurable
 
 Styles to modify the User Interface of Mozilla Firefox through [UserChrome.css](http://kb.mozillazine.org/index.php?title=UserChrome.css). Their installation is [not as easy](https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/), and this feature is disabled by default.
 
-1. Navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this) or locate the exact directory by visiting `about:profiles`.
+1. On Windows, navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this) or locate the exact directory by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste this code.
 3. If userChrome.css doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true`.
 
