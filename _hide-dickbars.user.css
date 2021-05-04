@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.8
+@version      0.1.9
 @license      MIT License
 ==/UserStyle== */
 
@@ -72,8 +72,12 @@
 		overflow: scroll !important;
 	}
 
-	#app > div:first-child > div > div:last-child,
-	#gateway-content {
+	#app > div > div > div:last-child {
+		display: none;
+	}
+
+	#gateway-content,
+	.expanded-dock {
 		display: none;
 	}
 }
