@@ -6,32 +6,22 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.10
+@version      0.1.2
 @license      MIT License
 ==/UserStyle== */
 
 
 @-moz-document domain("facebook.com") {
-	/* ==========================================================================
-	Hide login CTA on facebook profiles
-	========================================================================== */
 	#pagelet_growth_expanding_cta {
 		display: none !important;
 	}
 }
 
 @-moz-document domain("instagram.com") {
-	/* ==========================================================================
-	Hide bottom CTA on instagram profiles
-	========================================================================== */
 	/* trialing rule, may be too aggressive */
 	div[style="width: 100%;"] {
 		display: none !important;
 	}
-
-	/* ==========================================================================
-	Hide login CTA on instagram profiles
-	========================================================================== */
 	body {
 		overflow: auto !important;
 	}
@@ -43,9 +33,6 @@
 }
 
 @-moz-document domain("twitter.com") {
-	/* ==========================================================================
-	Hide bottom CTA on twitter profiles
-	========================================================================== */
 	#layers {
 		/*display: none !important;*/
 	}
@@ -53,9 +40,6 @@
 
 
 @-moz-document domain("newyorker.com") {
-	/* ==========================================================================
-	Hide bottom CTA
-	========================================================================== */
 	.paywall-bar__wrapper,
 	.paywall-modal,
 	.unit-overlay,
@@ -65,9 +49,6 @@
 }
 
 @-moz-document domain("nytimes.com") {
-	/* ==========================================================================
-	Hide paywall and CTA
-	========================================================================== */
 	#app > div:first-child > div:first-child {
 		overflow: scroll !important;
 	}
@@ -80,12 +61,18 @@
 	.expanded-dock {
 		display: none;
 	}
+
+	/* wirecutter section */
+	#modal-portal-regiwall {
+		display: none;
+	}
+
+	body {
+		overflow: auto !important;
+	}
 }
 
 @-moz-document domain("wired.com") {
-	/* ==========================================================================
-	Hide paywall and CTA
-	========================================================================== */
 	.paywall-modal,
 	.paywall-bar--visible {
 		display: none !important;
@@ -93,9 +80,18 @@
 }
 
 @-moz-document domain("artforum.com") {
-	/* ==========================================================================
-	Hide paywall and CTA
-	========================================================================== */
+	.paywall-counter {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("artforum.com") {
+	.paywall-counter {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("artforum.com") {
 	.paywall-counter {
 		display: none !important;
 	}
