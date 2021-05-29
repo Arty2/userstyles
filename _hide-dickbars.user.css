@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.2
+@version      0.1.3
 @license      MIT License
 ==/UserStyle== */
 
@@ -60,6 +60,16 @@
 	#gateway-content,
 	.expanded-dock {
 		display: none;
+	}
+
+	/* interactive category */
+
+	#standalone-footer {
+		display:  none;
+	}
+
+	#site-content: {
+		overflow:  scroll !important;
 	}
 
 	/* wirecutter section */
