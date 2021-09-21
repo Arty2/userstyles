@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.11
+@version      0.1.12
 @license      MIT License
 ==/UserStyle== */
 
@@ -100,7 +100,8 @@
 		overflow-y: scroll !important;
 	}
 
-	.tp-backdrop .tp-modal {
+	.tp-backdrop,
+	.tp-modal {
 		visibility: hidden !important;
 		pointer-events: none;
 	}
