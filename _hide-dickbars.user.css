@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.3
+@version      0.1.4
 @license      MIT License
 ==/UserStyle== */
 
@@ -95,15 +95,14 @@
 	}
 }
 
-@-moz-document domain("artforum.com") {
-	.paywall-counter {
-		display: none !important;
+@-moz-document domain("japantimes.co.jp") {
+	.tp-modal-open {
+		overflow-y: scroll !important;
 	}
-}
 
-@-moz-document domain("artforum.com") {
-	.paywall-counter {
-		display: none !important;
+	.tp-backdrop .tp-modal {
+		visibility: hidden !important;
+		pointer-events: none;
 	}
 }
 
