@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_neat-kanban.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.4
+@version      0.1.5
 @license      MIT License
 
 @preprocessor default
@@ -147,7 +147,7 @@
 	/* restyle header pill */
 	.kanbanStackHeader .pill {
 		display: block;
-		width: 0;
+		width: 100%;
 		overflow: visible;
 		border: 2px solid rgba(var(--airt-border-color));
 		color: rgba(var(--airt-text-color));
