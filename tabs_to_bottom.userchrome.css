@@ -1,16 +1,17 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
 @version      0.2.1
 
-1. Navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this) or locate the exact directory by visiting `about:profiles`.
-2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste this code.
+1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
+2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
 3. If userChrome.css doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true`.
+4. Restart Firefox.
 
 Other references:
 Firefox Support forum - Tabs below the URL bar: https://support.mozilla.org/en-US/kb/forum-response-tabs-below-url-bar
 Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
 */
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 /*
 tabs to bottom
