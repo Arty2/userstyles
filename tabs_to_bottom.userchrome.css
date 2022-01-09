@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.1
+@version      0.2.2
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -16,6 +16,16 @@ Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
 /*
 tabs to bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
+
+UI model:
+	#navigator-toolbox-background
+		#navigator-toolbox
+			#titlebar
+				#toolbar-menubar
+				#TabsToolbar
+			#nav-bar
+			#PersonalToolbar
+	#browser
 */
 
 /* bring the browser window to the top */
@@ -23,8 +33,18 @@ source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrom
 	-moz-box-ordinal-group: 0 !important;
 }
 
-:root[sizemode="normal"] #browser {
-	padding-top: 8px;
+/* adjust paddings */
+*|*:root[sizemode="maximized"] #TabsToolbar {
+	/* a bug prohibits removing top paddint of #titlebar */
+	margin-top: -8px !important;
+}
+
+*|*:root[sizemode="maximized"] #browser {
+	padding-top: 8px !important;
+}
+
+*|*:root[sizemode="normal"] #browser {
+	padding-top: 0 !important;
 }
 
 /* hide tab toolbar when fullscreen */
@@ -33,16 +53,19 @@ source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrom
 	display: none;
 }
 
+/* restore top border */
+/*TODO: find the proper color variable, it's not -moz-accent-color*/
+*|*:root[sizemode="normal"] #browser {
+	border-top: 1px solid #4d4d50 !important;
+}
+
+/* make toolbar border persist on fullscreen */
+*|*:root[sizemode="maximized"] #navigator-toolbox {
+  border-top: 1px solid -moz-accent-color !important;
+  border-bottom: 1px solid -moz-accent-color !important;
+}
+
 /* hide titlebar buttons */
 #TabsToolbar > .titlebar-buttonbox-container {
 	display: none !important;
-}
-
-/* remove gaps in tab bar start and end */
-.titlebar-spacer[type="pre-tabs"] {
-	display: none !important;
-}
-
-.titlebar-spacer[type="post-tabs"] {
-	width: 8px !important;
 }
