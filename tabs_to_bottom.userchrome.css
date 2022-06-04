@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.2
+@version      0.2.3
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -13,7 +13,7 @@ Firefox Support forum - Tabs below the URL bar: https://support.mozilla.org/en-U
 Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
 */
 
-/*
+/*----------------------------------------------------------
 tabs to bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
 
@@ -34,15 +34,6 @@ UI model:
 }
 
 /* adjust paddings */
-*|*:root[sizemode="maximized"] #TabsToolbar {
-	/* a bug prohibits removing top paddint of #titlebar */
-	margin-top: -8px !important;
-}
-
-*|*:root[sizemode="maximized"] #browser {
-	padding-top: 8px !important;
-}
-
 *|*:root[sizemode="normal"] #browser {
 	padding-top: 0 !important;
 }
@@ -69,3 +60,7 @@ UI model:
 #TabsToolbar > .titlebar-buttonbox-container {
 	display: none !important;
 }
+
+/*TODO: fix pop-ups opening below window*/
+/*.urlbarView-body-inner { border-top: none !important; }*/
+/*.urlbarView { display: none !important; }*/
