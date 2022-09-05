@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.13
+@version      0.1.14
 @license      MIT License
 ==/UserStyle== */
 
@@ -33,8 +33,13 @@
 }
 
 @-moz-document domain("twitter.com") {
-	#layers {
-		/*display: none !important;*/
+	:root {
+		overflow: auto !important;
+	}
+	[data-testid="sheetDialog"],
+	[role="group"][tabindex="0"],
+	[data-testid="BottomBar"] {
+		display: none !important;
 	}
 }
 
@@ -107,3 +112,8 @@
 	}
 }
 
+@-moz-document domain("beta.startupy.world") {
+	.free-trial-modal {
+		visibility: hidden !important;
+	}
+}
