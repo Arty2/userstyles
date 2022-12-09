@@ -64,6 +64,7 @@ UI model:
 /*fix pop-ups opening below window*/
 #urlbar[open]{
   display: flex !important;
+/* in flex-direction, you can use 'column' if you don't want to type the URL at the bottom but in center*/
   flex-direction: column-reverse;
   bottom: -2px !important;
   top: auto !important;
