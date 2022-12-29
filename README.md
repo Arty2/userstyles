@@ -30,7 +30,7 @@ Global or single-purpose styles that apply to multiple domains.
 
 ### Hide dickbars
 
-Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites.  Currently: facebook.com; instragram.com; twitter.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp.
+Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com; instragram.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp. For more complete applications, there are elaborate solutions such as [@yourduskquibbles/webannoyances](https://github.com/yourduskquibbles/webannoyances).
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
 
@@ -45,24 +45,29 @@ Applies thin scrollbars to all windows and elements. The colors are configurable
 
 Styles to modify the User Interface of Mozilla Firefox through [UserChrome.css](http://kb.mozillazine.org/index.php?title=UserChrome.css). Their installation is [not as easy](https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/), and this feature is disabled by default.
 
-1. On Windows, navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this) or locate the exact directory by visiting `about:profiles`.
-2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste this code.
-3. If userChrome.css doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true`.
+1. On Windows, navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this in the Explorer address bar) or open the *Local Directory* of the profile in use by visiting `about:profiles` from the browser address bar. The profile in use is the one you cannot delete.
+2. Create a folder named `chrome` then create inside it a file named `userChrome.css`  where you will paste the relevant code.
+3. If `userChrome.css` doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true` if already set to *false*.
 
 ### tabs_to_bottom.userchrome.css
 
 Moves the tab and URL bar to the bottom of the window. It’s where browser tabs should be by default in Windows, if proximity to the taskbar matters.
 
-💾 [See the code](https://raw.githubusercontent.com/Arty2/userstyles/master/tabs_to_bottom.userchrome.css)
+💾 [Inspect the code](https://raw.githubusercontent.com/Arty2/userstyles/master/tabs_to_bottom.userchrome.css)
 
 ![tabs to bottom for Firefox](./screenshots/tabs-to-bottom-userchrome.png)
 
+### proton_theme_tweaks.userchrome.css
+
+Tweaks for the *Firefox Proton* theme to remove border radius from several elements and make tabs bar more compact.
+
+💾 [Inspect the code](https://raw.githubusercontent.com/Arty2/userstyles/master/proton_theme_tweaks.userchrome.css)
 
 ## airtable.com
 
 ### airtable.com dark theme
 
-Dark theme for airtable.com. Beta quality, beware of 🐛.
+Dark theme for airtable.com. Alpha quality, beware of 🐛.
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/airtable-com_dark-theme.user.css)
 
@@ -74,7 +79,14 @@ Modifies the display of Airtable’s Kanban view to make better use of available
 
 ![airtable.com neat kanban](./screenshots/airtable-com_neat-kanban.gif)
 
+## paper.dropbox.com
+
+### paper.dropbox.com focus theme
+
+A set of styles that turns the sidebar and menus partialy transparent when the cursor is not over them. Includes some stylistic changes over the display of text, eg. — instead of bullet points, Input font (if exists on the system).
+
+📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/paper-dropbox-com_focus.user)
 
 * * *
 
-© 2020 [Heracles Papatheodorou](https://heracl.es) a.k.a [@Arty2](https://www.twitter.com/Arty2), MIT Licence
+© 2020-2022 [Heracles Papatheodorou](https://heracl.es) a.k.a [@heracles](https://mastodon.social/@heracles), MIT Licence

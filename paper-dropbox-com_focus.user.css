@@ -1,0 +1,103 @@
+/*
+https://github.com/Arty2/userstyles
+@version      0.1
+
+A set of styles that turns the sidebar and menus partialy transparent when the cursor is not over them. Includes some stylistic changes over the display of text, eg. — instead of bullet points, Input font (if exists on the system).
+
+*/
+
+@-moz-document domain("https://paper.dropbox.com/doc/") {
+	::-moz-selection { background: #000; }
+	::selection { background: #000; }
+
+	/*---------
+	UI changes
+	----------*/
+	
+	.hp-toc .hp-toc-entries {
+	/* 	outline: 1px solid yellow; */
+	}
+
+	#comments-sidebar,
+	.folder-sidebar,
+	#main-header-container,
+	.hp-editor-footer-buttons,
+	.pad-page-sidebar-open-button,
+	.calendar-event-button-text {
+		opacity: 0.05;
+		filter: grayscale(100%);
+		transition: all 0.3s;
+		transition-delay: 1.5s;
+	}
+
+	.hp-sidebar-container {
+		background: none;
+	}
+
+	#comments-sidebar {	
+		transition-delay: 0s;
+	}
+
+	/*TODO: also return to full opacity when focused*/
+	#comments-sidebar:hover,
+	.folder-sidebar:hover,
+	#main-header-container:hover,
+	.hp-editor-footer-buttons:hover,
+	.pad-page-sidebar-open-button:hover,
+	.calendar-event-button-text:hover {
+		opacity: 1;
+		filter: grayscale(0);
+		transition-delay: 0s;
+	}
+
+	.ace-editor:not(.editor-blank) > div.ace-line::before {
+		opacity: 0.2;
+		filter: grayscale(100%);
+		transition: all 0.3s;
+		transition-delay: 1.5s;
+	}
+	.ace-editor:not(.editor-blank) > div.ace-line:hover::before {
+		opacity: 1;
+		filter: grayscale(0);
+		transition-delay: 0s;
+	}
+
+	.ace-editor ul li {
+		list-style: none;
+	}
+
+	.ace-editor ul li:before {
+		content: "–";
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.ace-editor,
+	.ace-editor h1, .ace-editor h2, .ace-editor h3,
+	.ace-feature-bigtitle > .ace-editor > div:first-child,
+	.hp-versions-button,
+	.hp-toc .hp-toc-entries .dmc-button-content {
+		font-family: Input, "Input Mono", monospace !important;
+	}
+
+	.hp-versions-button.more-discoverable-sidebars {
+		position: absolute;
+		right: 0px;
+		height: auto;
+		font-size: 14px !important;
+	}
+
+	.hp-editor-assist-button-group {
+		margin-bottom: 30px;
+	}
+
+	.hp-toc-entry-current:before {
+		content: '•';
+		display: block;
+		float: left;
+		margin-left: -10px;
+		margin-top: 2px;
+		transition: all 0.3s;
+	}
+}
