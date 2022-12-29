@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.3
+@version      0.2.4
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -14,7 +14,7 @@ Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
 */
 
 /*----------------------------------------------------------
-tabs to bottom
+Tabs to Bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
 
 UI model:
@@ -64,10 +64,9 @@ UI model:
 /*fix pop-ups opening below window*/
 #urlbar[open]{
   display: flex !important;
-/* in flex-direction, you can use 'column' if you don't want to type the URL at the bottom but in center*/
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; /* use 'column' if you want to type the URL in center*/
   bottom: -2px !important;
   top: auto !important;
 }
 /*.urlbarView-body-inner { border-top: none !important; }*/
-/*.urlbarView { display: none !important; }*/
+/*.urlbarView { display: none !important; }*/ /* uncomment this to hidden address bar suggestions */
