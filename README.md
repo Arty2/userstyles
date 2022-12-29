@@ -85,7 +85,7 @@ Modifies the display of Airtable’s Kanban view to make better use of available
 
 A set of styles that turns the sidebar and menus partialy transparent when the cursor is not over them. Includes some stylistic changes over the display of text, eg. — instead of bullet points, Input font (if exists on the system).
 
-📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/paper-dropbox-com_focus.user)
+📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/paper-dropbox-com_focus.user.css)
 
 * * *
 
