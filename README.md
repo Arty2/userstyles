@@ -15,10 +15,13 @@ Click on “Install this style” to preview the CSS code and install directy if
     + [Hide dickbars](#hide-dickbars) — Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com, instragram.com, twitter.com, newyorker.com.
     + [Thin scrollbars](#thin-scrollbars) — Applies thin scrollbars to all windows and elements. The colors are configurable. ([Firefox only](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width#Browser_compatibility))
 - UserChrome.css
-    + [tabs_to_bottom.userchrome.css](#tabs-to-bottom-userchrome-css) — Moves the tab and URL bar to the bottom of the window.
+    + [tabs_to_bottom.userchrome.css](#tabs_to_bottomuserchromecss) — Moves the tab and URL bar to the bottom of the window.
+    + [proton_theme_tweaks.userchrome.css](#proton_theme_tweaksuserchromecss) — Tweaks for the Firefox Proton theme.
 - airtable.com
     + [airtable.com dark theme](#airtablecom-dark-theme) — Dark theme for airtable.com. Beta quality, beware of 🐛.
     + [airtable.com neat kanban](#airtablecom-neat-kanban) — Modifies the display of Airtable’s Kanban view to make better use of available space and simplify the cards UI.
+- paper.dropbox.com
+    + [paper.dropbox.com focus theme](#paperdropboxcom-focus-theme) — Stylistic changes to forus on the editor.
 
 
 * * *
