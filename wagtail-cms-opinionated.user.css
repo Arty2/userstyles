@@ -1,0 +1,172 @@
+/* ==UserStyle==
+@name         Wagtail CMS tweaks
+@description  Opinionated modifications to Wagtail CMS appearance.
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/wagtail-cms-opinionated.user.css
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.00
+@license      MIT License
+==/UserStyle== */
+
+@-moz-document regexp("\\/admin\\/") {
+/* add counters to list items --------------------*/
+div[data-streamfield-list-container] > div {
+    counter-increment: item 1;
+}
+
+div[data-streamfield-list-container] > div {
+    width: 24em;
+    max-width: calc(50% - 3em);
+    display: inline-block;
+}
+
+button[data-streamfield-list-add] {
+    display: inline;
+    width: 3em;
+}
+
+button[data-streamfield-list-add]:first-child {
+    display: block;
+}
+
+label.field__label, .title-wrapper label {
+    text-transform: uppercase;
+}
+
+.c-sf-block__type {
+    text-transform: uppercase;
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+}
+
+div[data-streamfield-list-container] > div::before {
+    content: counter(item);
+    display: inline-block;
+    float: right;
+    padding-left: 5px;
+    width: 1em;
+    font-size: 80%;
+}
+
+/* floating tabs in edit page --------------------*/
+
+.w-tabs__wrapper {
+    position: fixed;
+    right: 1.5em;
+    z-index: 1000;
+    
+    text-transform: uppercase;
+}
+
+.w-tabs__list {
+    background: white;
+    border: 1px solid currentColor;
+}
+
+/* sortable in less space */
+
+.results_on_deck > div {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    
+}
+
+/* multitple in less space - WIP, add numbering, fix width */
+
+/* .object .multiple {
+    max-width: 100vw;
+    width: 100%;
+    background: #eee;
+    display: block;
+    float: none;
+}
+
+.object .multiple > li {
+    width: calc(50% - 1em);
+    display: inline-block;
+} */
+
+/* muted icons */
+
+button {
+    opacity: 0.5 !important;
+}
+
+button:hover {
+    opacity: 1 !important;
+}
+
+button:disabled {
+    opacity: 0.1 !important;
+}
+
+/* image types indicators --------------------*/
+
+.image:has(img[src$='.jpg'])::after,
+.preview-image:has(img[src$='.jpg'])::after {
+    content: 'JPG';
+    background: pink
+}
+
+.image:has(img[src$='.jpeg'])::after,
+.preview-image:has(img[src$='.jpeg'])::after {
+    content: 'JPEG';
+    background: salmon
+}
+
+.image:has(img[src$='.png'])::after,
+.preview-image:has(img[src$='.png'])::after {
+    content: 'PNG';
+    background: RED
+}
+
+.image,
+.preview-image {
+    position: relative;
+}
+
+.image::after,
+.preview-image::after {
+    font-size: 80%;
+    padding: 0.2em;
+}
+
+
+
+}
+
+@-moz-document regexp("\\/admin\\/") {
+/* dark theme -- WIP*/
+/* consider system preference */
+/* .content {
+    background: #111;
+    color: #fff;
+}
+
+
+.c-sf-block__header, .c-sf-block__type, 
+.c-sf-block {
+    background: #222;
+    border-color: #000;
+    color: #fff;
+}
+
+.c-sf-block:focus>.c-sf-block__header .c-sf-block__actions__single, .c-sf-block:focus>.c-sf-block__header .c-sf-block__header__title, .c-sf-block:hover>.c-sf-block__header .c-sf-block__actions__single, .c-sf-block:hover>.c-sf-block__header .c-sf-block__header__title {
+    color: #fff !important;
+}
+
+.tagit, input:not([type=submit]), select, textarea {
+    background: #333;
+    color: #fff;
+}
+
+.label, label {
+    color: #fff;
+}
+
+.help {
+    color: #777;
+} */
+}
