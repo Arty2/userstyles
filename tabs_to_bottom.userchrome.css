@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.4
+@version      0.2.5
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -31,6 +31,12 @@ UI model:
 /* bring the browser window to the top */
 #browser {
 	-moz-box-ordinal-group: 0 !important;
+	order: 0 !important;
+}
+
+#navigator-toolbox-background {
+	-moz-box-ordinal-group: 1 !important;
+	order: 1 !important;
 }
 
 /* adjust paddings */
@@ -45,15 +51,17 @@ UI model:
 }
 
 /* restore top border */
-/*TODO: find the proper color variable, it's not -moz-accent-color*/
 *|*:root[sizemode="normal"] #browser {
-	border-top: 1px solid #4d4d50 !important;
+	border-top: .5px solid AccentColor !important;
+}
+*|*:root[sizemode="normal"]:-moz-window-inactive #browser {
+	border-top-color: rgb(57,57,57) !important;
 }
 
 /* make toolbar border persist on fullscreen */
 *|*:root[sizemode="maximized"] #navigator-toolbox {
-  border-top: 1px solid -moz-accent-color !important;
-  border-bottom: 1px solid -moz-accent-color !important;
+  border-top: .5px solid AccentColor !important;
+  border-bottom: .5px solid AccentColor !important;
 }
 
 /* hide titlebar buttons */
