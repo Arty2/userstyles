@@ -64,6 +64,10 @@ div[data-streamfield-list-container] > div::before {
     background: white;
     border: 1px solid currentColor;
 }
+    
+#page-edit-form footer {
+    right: 0;
+}
 
 /* sortable in less space */
 
