@@ -76,7 +76,12 @@ div[data-streamfield-list-container] > div::before {
     margin: 0 0.5em 0.5em 0;
     
 }
-
+/* structured data block */
+.struct-block > * {
+    width: 50%;
+    display: inline-block;
+}
+    
 /* multitple in less space - WIP, add numbering, fix width */
 
 /* .object .multiple {
