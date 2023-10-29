@@ -18,13 +18,12 @@ Tabs to Bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
 
 UI model:
-	#navigator-toolbox-background
-		#navigator-toolbox
-			#titlebar
-				#toolbar-menubar
-				#TabsToolbar
-			#nav-bar
-			#PersonalToolbar
+	#navigator-toolbox
+		#titlebar
+			#toolbar-menubar
+			#TabsToolbar
+		#nav-bar
+		#PersonalToolbar
 	#browser
 */
 
@@ -34,7 +33,7 @@ UI model:
 	order: 0 !important;
 }
 
-#navigator-toolbox-background {
+#navigator-toolbox {
 	-moz-box-ordinal-group: 1 !important;
 	order: 1 !important;
 }
