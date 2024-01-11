@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.16
+@version      0.1.17
 @license      MIT License
 ==/UserStyle== */
 
@@ -18,7 +18,6 @@
 }
 
 @-moz-document domain("instagram.com") {
-	/* Firefox requires layout.css.has-selector.enabled to be set to true */
 	div#scrollview + div:has(#loginForm) {
 		display: none !important;
 	}
@@ -105,5 +104,17 @@
 @-moz-document domain("beta.startupy.world") {
 	.free-trial-modal {
 		visibility: hidden !important;
+	}
+}
+
+@-moz-document domain("tumblr.com") {
+	#glass-container > div[role="dialog"]:first-child {
+		display: none !important;
+	}
+	body#tumblr {
+		overflow: scroll !important;
+	}
+	div[style="background: rgb(124, 92, 255); color: rgb(255, 255, 255);"]:has(button[aria-label="Sign me up"]) {
+		display: none !important;
 	}
 }
