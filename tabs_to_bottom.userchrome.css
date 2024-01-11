@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.5
+@version      0.2.6
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -18,13 +18,12 @@ Tabs to Bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
 
 UI model:
-	#navigator-toolbox-background
-		#navigator-toolbox
-			#titlebar
-				#toolbar-menubar
-				#TabsToolbar
-			#nav-bar
-			#PersonalToolbar
+	#navigator-toolbox
+		#titlebar
+			#toolbar-menubar
+			#TabsToolbar
+		#nav-bar
+		#PersonalToolbar
 	#browser
 */
 
@@ -34,7 +33,8 @@ UI model:
 	order: 0 !important;
 }
 
-#navigator-toolbox-background {
+#navigator-toolbox, /* after version 119 */ 
+#navigator-toolbox-background { /* before version 119 */
 	-moz-box-ordinal-group: 1 !important;
 	order: 1 !important;
 }
