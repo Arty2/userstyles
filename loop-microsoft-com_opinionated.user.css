@@ -6,14 +6,14 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/loop-microsoft-com_opinionated.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.0
+@version      0.1.1
 @license      MIT License
 
 @preprocessor default
 
 ==/UserStyle== */
 
-@-moz-document domain("https://loop.microsoft.com/p/") {
+@-moz-document domain("loop.microsoft.com") {
 	div.scriptor-listItem li[style*="•"] {
 		--scriptor-list-marker-text: "–" !important;
 	}
