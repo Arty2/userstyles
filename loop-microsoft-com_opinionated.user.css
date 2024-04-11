@@ -1,10 +1,17 @@
-/*
-https://github.com/Arty2/userstyles
-@version      0.1
+/* ==UserStyle==
+@name         loop.microsoft.com opinionated
+@description  A set stylistic changes for Microsoft Loop eg. dash (—) instead of bullet points, Input font (if exists on the system).
+@author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
+@namespace    https://heracl.es
+@homepageURL  https://github.com/Arty2/userstyles
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/loop-microsoft-com_opinionated.user.css
+@supportURL   https://github.com/Arty2/userstyles/issues
+@version      0.1.0
+@license      MIT License
 
-A set stylistic changes for Microsoft Loop eg. dash (—) instead of bullet points, Input font (if exists on the system).
+@preprocessor default
 
-*/
+==/UserStyle== */
 
 @-moz-document domain("https://loop.microsoft.com/p/") {
 	div.scriptor-listItem li[style*="•"] {
