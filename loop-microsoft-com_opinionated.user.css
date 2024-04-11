@@ -1,0 +1,13 @@
+/*
+https://github.com/Arty2/userstyles
+@version      0.1
+
+A set stylistic changes for Microsoft Loop eg. dash (—) instead of bullet points, Input font (if exists on the system).
+
+*/
+
+@-moz-document domain("https://loop.microsoft.com/p/") {
+	div.scriptor-listItem li[style*="•"] {
+		--scriptor-list-marker-text: "–" !important;
+	}
+}
