@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name         support.artifaxevent.net print
+@name         support.artifax.net print
 @description  Lightweight print styles to easily make PDFs from the the Artifax Help Centre.
 @author       Heracles Papatheodorou <email@heracl.es> (https://heracl.es)
 @namespace    https://heracl.es
 @homepageURL  https://github.com/Arty2/userstyles
-@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/support-artifaxevent-net_print.user.css
+@updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/support-artifax-net_print.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
 @version      0.1.0
 @license      MIT License
@@ -13,7 +13,7 @@
 
 ==/UserStyle== */
 
-@-moz-document domain("support.artifaxevent.net") {
+@-moz-document domain("support.artifax.net") {
 	@media print {
 		nav.navbar,
 		main > .hero,
