@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/support-artifax-net_print.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.0
+@version      0.1.1
 @license      MIT License
 
 @preprocessor default
@@ -15,15 +15,26 @@
 
 @-moz-document domain("support.artifax.net") {
 	@media print {
-		nav.navbar,
-		main > .hero,
-		aside.sidebar,
-		.card.cta, .avatar, .subscribe-article,
-		#comments,
-		.article-content + div,
-		.related-articles, .recent-articles,
-		main + footer {
-			display: none !important;
-		}
+	        header.fixed-header,
+			nav.navbar,
+			main > .hero,
+			aside.sidebar,
+	        .avatar, .media .link-implied, .media a[href="#comments"], .subscribe-article,
+			.card.cta, .article-content + div, #comments,
+			.related-articles, .recent-articles,
+			main + footer {
+				display: none !important;
+			}
+	    
+	        .media li {
+	            color: grey !important;
+	        }
+	        .media time {
+	             color:transparent;
+	        }
+	        .media time::before {
+	            content: attr(title);
+	            color:grey;
+	        }
 	}
 }
