@@ -45,9 +45,8 @@ UI model:
 }
 
 /* hide tab toolbar when fullscreen */
-#nav-bar[inFullscreen],
-#TabsToolbar[inFullscreen] {
-	display: none;
+*|*:root[inFullscreen] #navigator-toolbox {
+        display: none;
 }
 
 /* restore top border */
