@@ -33,7 +33,7 @@ Global or single-purpose styles that apply to multiple domains.
 
 ### Hide dickbars
 
-Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com; instagram.com; tumblr.com; twitter.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp; kathimerini.gr. For more complete applications, there are elaborate solutions such as [@yourduskquibbles/webannoyances](https://github.com/yourduskquibbles/webannoyances).
+Hides [“dickbars”](https://daringfireball.net/linked/2011/03/06/dickbar), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com; instagram.com; linkedin.com, tumblr.com; twitter.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp; kathimerini.gr. For more complete applications, there are elaborate solutions such as [@yourduskquibbles/webannoyances](https://github.com/yourduskquibbles/webannoyances).
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
 
