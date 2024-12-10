@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.23
+@version      0.1.24
 @license      MIT License
 ==/UserStyle== */
 
@@ -144,7 +144,10 @@
 }
 
 @-moz-document domain("theverge.com") {
-	#zephr-zone-footer {
-	display: none !important;
+	#zephr-zone-footer, #zephr-overlay {
+		display: none !important;
+	}
+	body {
+		overflow: auto !important;
 	}
 }
