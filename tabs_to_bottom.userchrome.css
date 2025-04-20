@@ -79,7 +79,14 @@ UI model:
 /*.urlbarView { display: none !important; }*/ /* uncomment this to hidden address bar suggestions */
 
 /* removes wierd 1px borders above/below the navigator toolbox */
+#navigator-toolbox {
+        border-bottom: 0px !important;
+}
+:root[sizemode="normal"] #browser {
+        border-top: 0px !important;
+}
 :root[sizemode="maximized"] #navigator-toolbox {
 	border-top: 0px !important;
 	border-bottom: 0px !important;
 }
+
