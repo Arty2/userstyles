@@ -46,7 +46,7 @@ UI model:
 
 /* hide tab toolbar when fullscreen */
 *|*:root[inFullscreen] #navigator-toolbox {
-        display: none;
+    display: none;
 }
 
 /* restore top border */
@@ -59,8 +59,8 @@ UI model:
 
 /* make toolbar border persist on fullscreen */
 *|*:root[sizemode="maximized"] #navigator-toolbox {
-  border-top: .5px solid AccentColor !important;
-  border-bottom: .5px solid AccentColor !important;
+	border-top: .5px solid AccentColor !important;
+	border-bottom: .5px solid AccentColor !important;
 }
 
 /* hide titlebar buttons */
@@ -70,10 +70,16 @@ UI model:
 
 /*fix pop-ups opening below window*/
 #urlbar[open]{
-  display: flex !important;
-  flex-direction: column-reverse; /* use 'column' if you want to type the URL in center*/
-  bottom: -2px !important;
-  top: auto !important;
+	display: flex !important;
+	flex-direction: column-reverse; /* use 'column' if you want to type the URL in center*/
+	bottom: -2px !important;
+	top: auto !important;
 }
 /*.urlbarView-body-inner { border-top: none !important; }*/
 /*.urlbarView { display: none !important; }*/ /* uncomment this to hidden address bar suggestions */
+
+/* removes wierd 1px borders above/below the navigator toolbox */
+:root[sizemode="maximized"] #navigator-toolbox {
+	border-top: 0px !important;
+	border-bottom: 0px !important;
+}
