@@ -1,0 +1,35 @@
+@-moz-document domain("www.onassis.org") {
+/* WIP experimental dark theme for www.onassis.org */
+/* TODO: consider system preference? */
+.content {
+    background: #111;
+    color: #fff;
+}
+
+.c-sf-block__header, .c-sf-block__type, 
+.c-sf-block {
+    background: #222;
+    border-color: #000;
+    color: #fff;
+}
+
+.c-sf-block:focus>.c-sf-block__header .c-sf-block__actions__single,
+.c-sf-block:focus>.c-sf-block__header .c-sf-block__header__title,
+.c-sf-block:hover>.c-sf-block__header .c-sf-block__actions__single,
+.c-sf-block:hover>.c-sf-block__header .c-sf-block__header__title {
+    color: #fff !important;
+}
+
+.tagit, input:not([type=submit]), select, textarea {
+    background: #333;
+    color: #fff;
+}
+
+.label, label {
+    color: #fff;
+}
+
+.help {
+    color: #777;
+}
+}
