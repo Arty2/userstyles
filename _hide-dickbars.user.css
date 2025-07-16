@@ -6,7 +6,7 @@
 @homepageURL  https://github.com/Arty2/userstyles
 @updateURL    https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css
 @supportURL   https://github.com/Arty2/userstyles/issues
-@version      0.1.24
+@version      0.1.25
 @license      MIT License
 ==/UserStyle== */
 
@@ -54,36 +54,14 @@
 }
 
 @-moz-document domain("nytimes.com") {
-	#app > div:first-child > div:first-child {
-		overflow: scroll !important;
-	}
-
-	#app > div > div > div:last-child {
-		display: none;
-	}
-
-	#gateway-content,
-	.expanded-dock {
-		display: none;
-	}
-
-	/* interactive category */
-
-	#standalone-footer {
-		display:  none;
-	}
-
-	#site-content {
-		overflow:  scroll !important;
-	}
-
-	/* wirecutter section */
-	#modal-portal-regiwall {
-		display: none;
-	}
-
-	body {
+	.vi-gateway-container {
 		overflow: auto !important;
+		height: auto !important;
+		position: static !important;
+	}
+
+	div[data-testid="gateway-content"] {
+		display: none !important;
 	}
 }
 
