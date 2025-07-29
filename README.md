@@ -33,7 +33,7 @@ Global or single-purpose styles that apply to multiple domains.
 
 ### Hide dickbars
 
-Hides “dickbars” ([as defined by John Gruber](https://daringfireball.net/linked/2011/03/06/dickbar)), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com; instagram.com; linkedin.com, tumblr.com; twitter.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp; kathimerini.gr, verge.com.
+Hides “dickbars” ([as defined by John Gruber](https://daringfireball.net/linked/2011/03/06/dickbar)), i.e. annoying CTAs and floating bars in several websites. Currently: facebook.com; instagram.com; linkedin.com, tumblr.com; twitter.com; newyorker.com; nytimes.com (incl. wirecutter); wired.com; artforum.com; japantimes.co.jp; kathimerini.gr; verge.com; artforum.com; creativeapplications.net.
 These UserStyles are neither able nor intent to bypass [paywalls](https://en.wikipedia.org/wiki/Paywall), but instead provide a convenient way to view content without obstructions. Please be aware that they are not thoroughly tested, and on occasion may break useful functionality of the targeted websites, such as login pop-ups. For more complete applications, there are elaborate solutions such as [@yourduskquibbles/webannoyances](https://github.com/yourduskquibbles/webannoyances) or [12ft.io](https://12ft.io/).
 
 📦 [Install this style](https://raw.githubusercontent.com/Arty2/userstyles/master/_hide-dickbars.user.css)
@@ -49,9 +49,10 @@ Applies thin scrollbars to all windows and elements. The colors are configurable
 
 Styles to modify the User Interface of Mozilla Firefox through [UserChrome.css](https://kb.mozillazine.org/index.php?title=UserChrome.css). Their installation is [not as straightforward](https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/), and this feature is disabled by default.
 
-1. On Windows, navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this in the Explorer address bar) or open the *Local Directory* of the profile in use by visiting `about:profiles` from the browser address bar. The profile in use is the one you cannot delete.
+1. On Windows, navigate to `%APPDATA%\Mozilla\Firefox\Profiles` (you can copy/paste this in the Explorer address bar) or open the *Local Directory* of the profile in use by visiting `about:profiles` from the browser address bar. The profile in use is the one you cannot delete. On Linux, use the *Root Directory* instead, under `~/.mozilla/firefox/`.
 2. Create a folder named `chrome` then create inside it a file named `userChrome.css`  where you will paste the relevant code.
-3. If `userChrome.css` doesn’t seem to work, open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets=true` if already set to *false*.
+3. Open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to *true*. The default is *false*.
+4. Restart the browser for the styles to take effect.
 
 ### tabs_to_bottom.userchrome.css
 
