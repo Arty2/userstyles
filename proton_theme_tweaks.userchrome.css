@@ -1,6 +1,6 @@
 /*----------------------------------------------------------
 https://github.com/Arty2/userstyles
-@version      0.1
+@version      0.2
 
 Tweaks for the *Firefox Proton* theme to remove border radius from several elements and make tabs bar more compact.
 
@@ -13,40 +13,50 @@ source: https://github.com/Arty2/userstyles/blob/master/proton_theme_tweaks.user
 
 /* remove radius from buttons and tabs */
 *|*:root {
-	--toolbarbutton-border-radius: 0 !important;
-	--tab-border-radius: 0 !important;
-	--toolbarbutton-outer-padding: 0 !important;
-  --toolbarbutton-inner-padding: 8px !important;
-  --toolbar-start-end-padding: 0 !important;
+    --toolbarbutton-border-radius: 0 !important;
+    --tab-border-radius: 0 !important;
+    --toolbarbutton-outer-padding: 0 !important;
+    --toolbarbutton-inner-padding: 8px !important;
+    --toolbar-start-end-padding: 0 !important;
 }
 
-/* remove margin fron tabs */
-.tab-background {
-	margin-block: 0 !important;
+/* make sure there's no weird margins */
+#tabbrowser-tabs {
+    min-height: auto !important;
+}
+
+/* fix for when titlebar gets taller when there are many tabs*/
+#tabbrowser-arrowscrollbox {
+    height: var(--tab-min-height) !important;
 }
 
 /* remove padding between tabs */
 .tabbrowser-tab {
-	padding-inline: 0 !important;
+    padding-inline: 0 !important;
 }
 
-/*fix for when titlebar gets taller when there are many tabs*/
-#tabbrowser-arrowscrollbox {
-	height: var(--tab-min-height);
+/* add accent color */
+.tabbrowser-tab[selected="true"] .tab-background {
+    border-bottom: 2px solid AccentColor !important;
+}
+
+/* remove margin fron tabs */
+.tab-background {
+    margin-block: 0 !important;
 }
 
 /* remove titlebar top padding */
 #titlebar {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 /* remove gaps in tab bar start and end */
 .titlebar-spacer[type="pre-tabs"] {
-	width: 0 !important;
+    width: 0 !important;
 }
 
 .titlebar-spacer[type="post-tabs"] {
-	width: 0 !important;
+    width: 0 !important;
 }
 
 /*TODO: remove corner radius from pop-ups*/
