@@ -18,38 +18,38 @@
 
 ==/UserStyle== */
 
+
 @-moz-document domain("airtable.com") {
-    /* ==========================================================================
+	/* ==========================================================================
 	Set default background colors and borders
 	========================================================================== */
+	
+	/* in kanban board */
+	#kanbanView {
+		background: rgba(var(--airt-kanban-color));
+	}
 
-    /* in kanban board */
-    #kanbanView {
-        background: rgba(var(--airt-kanban-color));
-    }
-
-    /* ==========================================================================
+	/* ==========================================================================
 	Invert colors
 	========================================================================== */
-    #hyperbaseContainer {
-        /*filter: invert(100%);*/
-    }
+	#hyperbaseContainer {
+		filter: invert(100%);
+	}
 
-    #hyperbaseContainer .white {
-        filter: invert(100%);
-    }
+	#hyperbaseContainer .white {
+		filter: invert(100%);
+	}
 
-    #hyperbaseContainer img,
-    #hyperbaseContainer button {
-        /* revert images back to normal */
-        filter: invert(100%);
-    }
+	#hyperbaseContainer img,
+	#hyperbaseContainer button { /* revert images back to normal */
+	    filter: invert(100%);
+	}
 
-    .appTopBarContainer .userIcon {
-        filter: invert(100%);
-    }
+	.appTopBarContainer .userIcon {
+		filter: invert(100%);
+	}
 
-    #hyperbaseContainer .pill,
-    #hyperbaseContainer .colorOption {
-    }
+	#hyperbaseContainer .pill,
+	#hyperbaseContainer .colorOption {
+	}
 }
