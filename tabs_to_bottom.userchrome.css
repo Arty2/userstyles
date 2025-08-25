@@ -49,20 +49,6 @@ UI model:
     display: none;
 }
 
-/* restore top border */
-*|*:root[sizemode="normal"] #browser {
-	border-top: .5px solid AccentColor !important;
-}
-*|*:root[sizemode="normal"]:-moz-window-inactive #browser {
-	border-top-color: rgb(57,57,57) !important;
-}
-
-/* make toolbar border persist on fullscreen */
-*|*:root[sizemode="maximized"] #navigator-toolbox {
-	border-top: .5px solid AccentColor !important;
-	border-bottom: .5px solid AccentColor !important;
-}
-
 /* hide titlebar buttons */
 #TabsToolbar > .titlebar-buttonbox-container {
 	display: none !important;
@@ -76,19 +62,33 @@ UI model:
 	top: auto !important;
 }
 /*.urlbarView-body-inner { border-top: none !important; }*/
-/*.urlbarView { display: none !important; }*/ /* uncomment this to hidden address bar suggestions */
+/*.urlbarView { display: none !important; }*/ /* uncomment this to hide address bar suggestions */
 
-/* removes wierd 1px borders above/below the navigator toolbox */
-#navigator-toolbox {
-        border-bottom: 0px !important;
+/* restore top border */
+/* *|*:root[sizemode="normal"] #browser {
+	border-top: .5px solid AccentColor !important;
+}
+*|*:root[sizemode="normal"]:-moz-window-inactive #browser {
+	border-top-color: rgb(57,57,57) !important;
+}*/
+
+/* make toolbar border persist on fullscreen */
+/* *|*:root[sizemode="maximized"] #navigator-toolbox {
+	border-top: .5px solid AccentColor !important;
+	border-bottom: .5px solid AccentColor !important;
+}*/
+
+/* removes weird 1px borders above/below the navigator toolbox */
+/* #navigator-toolbox {
+    border-bottom: 0px !important;
 }
 :root[sizemode="normal"] #browser {
-        border-top: 0px !important;
+    border-top: 0px !important;
 }
 :root[sizemode="maximized"] #navigator-toolbox {
 	border-top: 0px !important;
 	border-bottom: 0px !important;
-}
+}*/
 
 /* stops the new search engine drop-down icon from floating in the middle of the screen */
 @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
