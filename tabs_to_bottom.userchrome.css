@@ -92,11 +92,9 @@ UI model:
 
 /* stops the new search engine drop-down icon from floating in the middle of the screen */
 @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
-  @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
-    #urlbar-searchmode-switcher {
-      #urlbar:not([unifiedsearchbutton-available]) > .urlbar-input-container > & {
-        position: unset !important;
-      }
+    @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+        .searchmode-switcher {
+            position: unset !important;
+        }
     }
-  }
 }
