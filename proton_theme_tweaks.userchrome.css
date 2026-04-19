@@ -12,6 +12,7 @@ References:  https://gist.github.com/tung/439935f55cc83af20defd7867ec89c82;
 	--toolbarbutton-outer-padding: 0 !important;
 	--toolbarbutton-inner-padding: 8px !important;
 	--toolbar-start-end-padding: 0 !important;
+	-moz-gtk-csd-titlebar-radius: 0 !important;
 }
 
 /* make sure there's no weird margins */
@@ -30,9 +31,9 @@ References:  https://gist.github.com/tung/439935f55cc83af20defd7867ec89c82;
 	padding-inline: 0 !important;
 }
 
-/* add accent color (optional) */
+/* add AccentColor */
 .tabbrowser-tab[selected="true"] .tab-background {
-    /*border-bottom: 2px solid AccentColor !important;*/
+    /*border-bottom: 2px solid var(--color-accent-primary) !important;*/
 }
 
 /* remove margin fron tabs */
@@ -55,6 +56,12 @@ References:  https://gist.github.com/tung/439935f55cc83af20defd7867ec89c82;
 }
 
 /* add borders around content area and toolbars */
+*|*:root[customtitlebar][sizemode="normal"]:not([gtktiledwindow]) > xhtml|body {
+	/*TODO: rule does not apply, GTK corners persist*/
+	border: 1px solid var(--toolbar-field-border-color) !important;
+	border-radius: 0px !important;
+}
+
 *|*:root[sizemode="normal"] #browser {
     border: 1px	solid var(--toolbar-field-border-color) !important;
     border-bottom: 0px !important;
@@ -66,7 +73,7 @@ References:  https://gist.github.com/tung/439935f55cc83af20defd7867ec89c82;
 	border-radius: 0px !important;
 }
 
-*|*:root #navigator-toolbox {
+#navigator-toolbox {
 	border-top: 1px solid var(--toolbar-field-border-color) !important;
 }
 
