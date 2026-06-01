@@ -33,7 +33,7 @@ UI model:
 	order: 0 !important;
 }
 
-#navigator-toolbox, /* after version 119 */ 
+#navigator-toolbox, /* after version 119 */
 #navigator-toolbox-background { /* before version 119 */
 	-moz-box-ordinal-group: 1 !important;
 	order: 1 !important;
@@ -97,4 +97,11 @@ UI model:
             position: unset !important;
         }
     }
+}
+
+/* fixes bug where search selector is floating in the middle of the screen */
+@media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+  .urlbar:not([unifiedsearchbutton-available]) > .urlbar-input-container > .searchmode-switcher {
+    position: unset !important;
+  }
 }
