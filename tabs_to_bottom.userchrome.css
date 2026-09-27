@@ -90,18 +90,9 @@ UI model:
 	border-bottom: 0px !important;
 }*/
 
-/* stops the new search engine drop-down icon from floating in the middle of the screen */
-@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
-    @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
-        .searchmode-switcher {
-            position: unset !important;
-        }
-    }
-}
-
-/* fixes bug where search selector is floating in the middle of the screen */
-@media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
-  .urlbar:not([unifiedsearchbutton-available]) > .urlbar-input-container > .searchmode-switcher {
-    position: unset !important;
-  }
+/* stops search selector from floating in the middle of the screen */
+.searchmode-switcher {    
+	&[offscreen] {
+		position: unset !important;
+	}
 }
