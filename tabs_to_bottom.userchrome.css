@@ -1,7 +1,7 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url("http://www.w3.org/1999/xhtml");
 /*
 https://github.com/Arty2/userstyles
-@version      0.2.6
+@version      0.2.5
 
 1. Find your profile folder `about:support > Profile Folder > Open Folder` or locate the exact profile in use by visiting `about:profiles`.
 2. Create a folder named `chrome` then create a file named userChrome.css inside it and paste the following code.
@@ -16,15 +16,6 @@ Custom CSS tweaks for Firefox Quantum: https://github.com/Aris-t2/CustomCSSforFx
 /*----------------------------------------------------------
 Tabs to Bottom
 source: https://github.com/Arty2/userstyles/blob/master/tabs_to_bottom.userchrome.css
-
-UI model:
-	#navigator-toolbox
-		#titlebar
-			#toolbar-menubar
-			#TabsToolbar
-		#nav-bar
-		#PersonalToolbar
-	#browser
 */
 
 /* bring the browser window to the top */
@@ -33,66 +24,47 @@ UI model:
 	order: 0 !important;
 }
 
-#navigator-toolbox, /* after version 119 */
-#navigator-toolbox-background { /* before version 119 */
+/* bring url bar to the bottom */
+#navigator-toolbox {
+	-moz-box-ordinal-group: 1 !important;
+	order: 1 !important;
+}
+#navigator-toolbox-background {
 	-moz-box-ordinal-group: 1 !important;
 	order: 1 !important;
 }
 
-/* adjust paddings */
-*|*:root[sizemode="normal"] #browser {
-	padding-top: 0 !important;
+/* suggestion list above url bar */
+.urlbarView {
+  &:popover-open {
+    position-area: block-start center !important;
+  }
 }
 
-/* hide tab toolbar when fullscreen */
-*|*:root[inFullscreen] #navigator-toolbox {
-    display: none;
+/* formatting stuff suggestion list */
+.urlbarView-background {
+  .urlbar > .urlbarView > & {
+    /* removed  - var(--urlbar-joint-background-overlap) */
+    inset-block: calc(-1 * var(--urlbarView-margin-block)) calc(-1 * var(--urlbarView-joint-background-outset-block)) !important;
+    border-start-start-radius: var(--urlbar-background-border-radius) !important;
+    border-start-end-radius: var(--urlbar-background-border-radius) !important;
+    border-end-start-radius: 0 !important;
+    border-end-end-radius: 0 !important;
+   	clip-path: inset(0 0 10px 0) !important;
+  }
+}
+.urlbarView-background {
+	inset-inline: calc(-1 * var(--urlbarView-joint-background-outset-inline));
+}
+/* formatting stuff urlbar */
+.urlbar-background {
+  .urlbar[popover-open] > & {
+  	border-start-start-radius: 0 !important;
+    border-start-end-radius: 0 !important;
+    border-end-start-radius: var(--urlbar-background-border-radius) !important;
+    border-end-end-radius: var(--urlbar-background-border-radius) !important;
+    clip-path: unset !important;
+    inset-block: calc(-1 * (var(--urlbar-background-overhang-open) + var(--urlbar-input-growth-open-block))) !important;
+  }
 }
 
-/* hide titlebar buttons */
-#TabsToolbar > .titlebar-buttonbox-container {
-	display: none !important;
-}
-
-/*fix pop-ups opening below window*/
-#urlbar[open]{
-	display: flex !important;
-	flex-direction: column-reverse; /* use 'column' if you want to type the URL in center*/
-	bottom: -2px !important;
-	top: auto !important;
-}
-/*.urlbarView-body-inner { border-top: none !important; }*/
-/*.urlbarView { display: none !important; }*/ /* uncomment this to hide address bar suggestions */
-
-/* restore top border */
-/* *|*:root[sizemode="normal"] #browser {
-	border-top: .5px solid AccentColor !important;
-}
-*|*:root[sizemode="normal"]:-moz-window-inactive #browser {
-	border-top-color: rgb(57,57,57) !important;
-}*/
-
-/* make toolbar border persist on fullscreen */
-/* *|*:root[sizemode="maximized"] #navigator-toolbox {
-	border-top: .5px solid AccentColor !important;
-	border-bottom: .5px solid AccentColor !important;
-}*/
-
-/* removes weird 1px borders above/below the navigator toolbox */
-/* #navigator-toolbox {
-    border-bottom: 0px !important;
-}
-:root[sizemode="normal"] #browser {
-    border-top: 0px !important;
-}
-:root[sizemode="maximized"] #navigator-toolbox {
-	border-top: 0px !important;
-	border-bottom: 0px !important;
-}*/
-
-/* stops search selector from floating in the middle of the screen */
-.searchmode-switcher {    
-	&[offscreen] {
-		position: unset !important;
-	}
-}
